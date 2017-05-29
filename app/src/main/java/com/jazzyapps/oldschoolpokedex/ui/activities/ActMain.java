@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -13,6 +14,9 @@ import com.jazzyapps.oldschoolpokedex.R;
 import com.jazzyapps.oldschoolpokedex.api.PokeApiClient;
 import com.jazzyapps.oldschoolpokedex.base.Constants;
 import com.jazzyapps.oldschoolpokedex.model.Pokemon.Pokemon;
+import com.squareup.picasso.Picasso;
+
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -33,6 +37,8 @@ public class ActMain extends AppCompatActivity {
   private final String TV_HEIGHT = "tv_height_filled";
   private final String TV_WEIGHT = "tv_weight_filled";
 
+  private final String DEFAULT_IMG_KEY = "front_default";
+
   Context application;
   PokeApiClient pokeApiClient;
 
@@ -49,6 +55,8 @@ public class ActMain extends AppCompatActivity {
   TextView tvHeight;
   @BindView(R.id.tv_weight)
   TextView tvWeight;
+  @BindView(R.id.iv_main)
+  ImageView ivMain;
 
 
   @Override
@@ -110,11 +118,14 @@ public class ActMain extends AppCompatActivity {
             String id = String.valueOf(pokemon.getId());
             String height = String.valueOf(pokemon.getHeight());
             String weight = String.valueOf(pokemon.getWeight());
+            Map<String, String> sprites = pokemon.getSprites();
+            String url = sprites.get(DEFAULT_IMG_KEY);
 
             tvName.setText("Name: " + name);
             tvNumber.setText("Number: " + id);
             tvHeight.setText("Height: " + height);
             tvWeight.setText("Weight: " + weight);
+            Picasso.with(application).load(url).into(ivMain);
           }
 
           tvSubmit.setClickable(true);

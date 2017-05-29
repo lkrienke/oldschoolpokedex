@@ -20,6 +20,8 @@ public class Pokemon {
   private int height;
   @Expose
   private int weight;
+  @Expose
+  private Map<String, String> sprites;
 
   public int getId() {
     return id;
@@ -51,6 +53,14 @@ public class Pokemon {
 
   public void setWeight(int weight) {
     this.weight = weight;
+  }
+
+  public Map<String, String> getSprites() {
+    return sprites;
+  }
+
+  public void setSprites(Map<String, String> sprites) {
+    this.sprites = sprites;
   }
 }
 
