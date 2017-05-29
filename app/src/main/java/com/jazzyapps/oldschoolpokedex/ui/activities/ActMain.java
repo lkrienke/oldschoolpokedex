@@ -1,11 +1,13 @@
 package com.jazzyapps.oldschoolpokedex.ui.activities;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -31,6 +33,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ActMain extends AppCompatActivity {
   private final String TAG = getClass().getSimpleName();
 
+  Context application;
   PokeApiClient pokeApiClient;
 
   @BindView(R.id.tv_name)
@@ -41,6 +44,7 @@ public class ActMain extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.act_main);
     ButterKnife.bind(this);
+    this.application = getApplicationContext();
   }
 
   @OnClick(R.id.tv_name)
@@ -58,12 +62,16 @@ public class ActMain extends AppCompatActivity {
       public void onResponse(Call<Pokemon> call, Response<Pokemon> response) {
         Pokemon pokemon = response.body();
         int statusCode = response.code();
+
         Log.d(TAG, "pokemon call worked! status code:" + statusCode + "pokemon name:" + pokemon.getName());
+        Toast.makeText(application, "API worked", Toast.LENGTH_LONG).show();
+
         tvName.setText(pokemon.getName());
       }
 
       @Override
       public void onFailure(Call<Pokemon> call, Throwable t) {
+        Toast.makeText(application, "API failure occured", Toast.LENGTH_LONG).show();
         Log.d(TAG, "-----Failure when calling pokemon get-----");
       }
     });

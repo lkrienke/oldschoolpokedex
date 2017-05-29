@@ -9,12 +9,12 @@
   <dimen name="nav_list_item_height">48dp</dimen>
   <dimen name="list_item_height">72dp</dimen>
 
-  <!-- size specific key-lines -->
+  <!-- Key-lines -->
   <dimen name="first_keyline">16dp</dimen>
   <dimen name="first_keyline_half">8dp</dimen>
   <dimen name="second_keyline">72dp</dimen>
 
-  <!-- typography -->
+  <!-- Typography -->
   <dimen name="display_4">112sp</dimen>
   <dimen name="display_3">64sp</dimen>
   <dimen name="display_2">45sp</dimen>
@@ -24,4 +24,14 @@
   <dimen name="subhead">16sp</dimen>
   <dimen name="body">14sp</dimen>
   <dimen name="caption">12sp</dimen>
+
+  <!-- TextViews -->
+  <dimen name="description_short">120dp</dimen>
+
+  <!-- Margins -->
+  <dimen name="image_margin">40dp</dimen>
+
+  <!-- Aspect Ratio -->
+  <dimen name="window_height">370dp</dimen>
+  <dimen name="image_size">120dp</dimen>
 </resources>

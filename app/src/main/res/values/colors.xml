@@ -15,7 +15,7 @@
 
   <!-- UI -->
   <color name="bg_color_light">#fff</color>
-  <color name="bg_color_dark">#ff4e4e4e</color>
+  <color name="bg_color_dark">#4e4e4e</color>
   <color name="toolbar_image_viewer">#93000000</color>
   <color name="blue_button">#53B5FC</color>
   <color name="divider">#1f000000</color>
@@ -32,5 +32,6 @@
   <color name="title_text">#de000000</color>
   <color name="body_text">#de000000</color>
   <color name="caption_text">#89000000</color>
+  <color name="text_background">#949494</color>
 
 </resources>
