@@ -3,7 +3,38 @@
   android:layout_width="match_parent"
   android:id="@+id/toolbar"
   android:layout_height="@dimen/second_keyline"
-  android:background="@color/red_dark"
+  android:background="@color/charmander_red"
   android:orientation="horizontal">
+
+  <ImageView
+    android:layout_marginLeft="@dimen/first_keyline"
+    android:layout_marginTop="@dimen/first_keyline"
+    android:layout_width="wrap_content"
+    android:background="@drawable/circle_drawable_main"
+    android:layout_height="wrap_content"/>
+
+  <ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/first_keyline"
+    android:layout_marginLeft="14dp"
+    android:background="@drawable/circle_drawable_red"
+    />
+
+  <ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/first_keyline"
+    android:layout_marginLeft="8dp"
+    android:background="@drawable/circle_drawable_yellow"
+    />
+
+  <ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/first_keyline"
+    android:layout_marginLeft="8dp"
+    android:background="@drawable/circle_drawable_green"
+    />
 
 </LinearLayout>

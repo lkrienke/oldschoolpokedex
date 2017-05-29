@@ -27,6 +27,7 @@
 
   <!-- TextViews -->
   <dimen name="description_short">120dp</dimen>
+  <dimen name="description_long">280dp</dimen>
 
   <!-- Margins -->
   <dimen name="image_margin">40dp</dimen>
@@ -34,4 +35,9 @@
   <!-- Aspect Ratio -->
   <dimen name="window_height">370dp</dimen>
   <dimen name="image_size">120dp</dimen>
+
+  <!-- Circle Drawables -->
+  <dimen name="circle_radius">2dp</dimen>
+  <dimen name="large_diameter">42dp</dimen>
+  <dimen name="small_diameter">12dp</dimen>
 </resources>
