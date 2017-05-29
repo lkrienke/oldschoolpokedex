@@ -145,15 +145,24 @@
     android:background="@drawable/shadow_section_top"/>
 
 
-  <TextView
-    android:id="@+id/tv_name"
+  <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="120dp"
     android:layout_alignParentBottom="true"
-    android:gravity="center_vertical"
-    android:text="Hello Trainer"
-    android:textAlignment="center"
-    android:textColor="@color/display_text"
-    android:textSize="@dimen/display_1"/>
+    android:gravity="center_vertical">
+
+
+    <EditText
+      android:id="@+id/et_poke_search"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="@string/pokemon_search_hint"
+      android:textAlignment="center"
+      android:textColor="@color/display_text"
+      android:textColorHint="@color/display_text"
+      android:textSize="@dimen/title"/>
+
+  </LinearLayout>
+
 
 </RelativeLayout>
