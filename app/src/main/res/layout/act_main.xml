@@ -10,7 +10,7 @@
   app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
   tools:context="com.jazzyapps.oldschoolpokedex.ui.activities.ActMain">
 
-  <!-- Wow we could reuse this if we made more activites! Amazing :) -->
+  <!-- Wow we could reuse this if we made more activities! Amazing :) -->
   <include
     android:id="@+id/toolbar_main"
     layout="@layout/toolbar"/>
@@ -35,7 +35,7 @@
     <!-- Short TextViews-->
 
     <TextView
-      android:id="@+id/tv_1"
+      android:id="@+id/tv_name"
       android:layout_width="@dimen/description_short"
       android:layout_height="@dimen/first_keyline"
       android:layout_marginLeft="@dimen/image_margin"
@@ -48,10 +48,10 @@
       android:textSize="@dimen/caption"/>
 
     <TextView
-      android:id="@+id/tv_2"
+      android:id="@+id/tv_number"
       android:layout_width="@dimen/description_short"
       android:layout_height="@dimen/first_keyline"
-      android:layout_below="@id/tv_1"
+      android:layout_below="@id/tv_name"
       android:layout_marginLeft="@dimen/image_margin"
       android:layout_marginTop="@dimen/first_keyline_half"
       android:layout_toRightOf="@id/iv_main"
@@ -62,10 +62,10 @@
       android:textSize="@dimen/caption"/>
 
     <TextView
-      android:id="@+id/tv_3"
+      android:id="@+id/tv_height"
       android:layout_width="@dimen/description_short"
       android:layout_height="@dimen/first_keyline"
-      android:layout_below="@id/tv_2"
+      android:layout_below="@id/tv_number"
       android:layout_marginLeft="@dimen/image_margin"
       android:layout_marginTop="@dimen/first_keyline_half"
       android:layout_toRightOf="@id/iv_main"
@@ -76,10 +76,10 @@
       android:textSize="@dimen/caption"/>
 
     <TextView
-      android:id="@+id/tv_4"
+      android:id="@+id/tv_weight"
       android:layout_width="@dimen/description_short"
       android:layout_height="@dimen/first_keyline"
-      android:layout_below="@id/tv_3"
+      android:layout_below="@id/tv_height"
       android:layout_marginLeft="@dimen/image_margin"
       android:layout_marginTop="@dimen/first_keyline_half"
       android:layout_toRightOf="@id/iv_main"
@@ -145,24 +145,33 @@
     android:background="@drawable/shadow_section_top"/>
 
 
-  <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="120dp"
-    android:layout_alignParentBottom="true"
-    android:gravity="center_vertical">
+  <EditText
+    android:id="@+id/et_poke_search"
+    android:layout_width="@dimen/description_long"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/shadow_bottom"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="@dimen/first_keyline_half"
+    android:hint="@string/pokemon_search_hint"
+    android:maxLines="1"
+    android:textAlignment="center"
+    android:textColor="@color/display_text"
+    android:textColorHint="@color/display_text"
+    android:textSize="@dimen/title"/>
 
 
-    <EditText
-      android:id="@+id/et_poke_search"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:hint="@string/pokemon_search_hint"
-      android:textAlignment="center"
-      android:textColor="@color/display_text"
-      android:textColorHint="@color/display_text"
-      android:textSize="@dimen/title"/>
-
-  </LinearLayout>
+  <TextView
+    android:id="@+id/tv_submit"
+    android:layout_width="@dimen/description_short"
+    android:layout_height="36dp"
+    android:layout_below="@id/et_poke_search"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="@dimen/first_keyline_half"
+    android:background="@color/charmander_red"
+    android:gravity="center"
+    android:text="search"
+    android:textAllCaps="true"
+    android:textColor="@color/title_text"/>
 
 
 </RelativeLayout>

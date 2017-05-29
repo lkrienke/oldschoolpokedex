@@ -9,6 +9,6 @@ import retrofit2.http.Path;
 public interface PokeApiClient {
 
   @GET("pokemon/{pokemon_id}")
-  Call<Pokemon> getPokemon(@Path("pokemon_id") int pokemonId);
+  Call<Pokemon> getPokemon(@Path("pokemon_id") String pokemonId);
 
 }
