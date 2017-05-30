@@ -1,37 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/rl_act_main"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:orientation="vertical"
   app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
   tools:context="com.jazzyapps.oldschoolpokedex.ui.activities.ActMain">
 
-  <android.support.v7.widget.Toolbar
-    android:id="@+id/toolbar"
-    android:layout_width="match_parent"
-    android:layout_height="@dimen/second_keyline"
-    android:background="@color/red_dark"/>
+  <!-- Wow we could reuse this if we made more activities! Amazing :) -->
+  <include
+    android:id="@+id/toolbar_main"
+    layout="@layout/toolbar"/>
 
-  <LinearLayout
-    android:id="@+id/ll_name_container"
+
+  <RelativeLayout
+    android:id="@+id/ll_window"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/selector_default"
-    android:clickable="true">
+    android:layout_height="@dimen/window_height"
+    android:layout_below="@id/toolbar_main"
+    android:background="@color/white_selector"
+    android:orientation="vertical">
+
+    <ImageView
+      android:id="@+id/iv_main"
+      android:layout_width="@dimen/image_size"
+      android:layout_height="@dimen/image_size"
+      android:layout_marginLeft="@dimen/image_margin"
+      android:layout_marginTop="@dimen/image_margin"
+      android:background="@color/bg_color_dark"/>
+
+    <!-- Short TextViews-->
 
     <TextView
       android:id="@+id/tv_name"
-      android:layout_width="match_parent"
-      android:layout_height="@dimen/list_item_height"
-      android:gravity="center_vertical"
-      android:text="Hello World"
-      android:textAlignment="center"
-      android:textColor="@color/display_text"
-      android:textSize="@dimen/display_1"/>
+      android:layout_width="@dimen/description_short"
+      android:layout_height="@dimen/first_keyline"
+      android:layout_marginLeft="@dimen/image_margin"
+      android:layout_marginTop="@dimen/image_margin"
+      android:layout_toRightOf="@id/iv_main"
+      android:background="@color/text_background"
+      android:paddingLeft="@dimen/first_keyline_half"
+      android:text="Name"
+      android:textColor="@color/body_text"
+      android:textSize="@dimen/caption"/>
 
-  </LinearLayout>
+    <TextView
+      android:id="@+id/tv_number"
+      android:layout_width="@dimen/description_short"
+      android:layout_height="@dimen/first_keyline"
+      android:layout_below="@id/tv_name"
+      android:layout_marginLeft="@dimen/image_margin"
+      android:layout_marginTop="@dimen/first_keyline_half"
+      android:layout_toRightOf="@id/iv_main"
+      android:background="@color/text_background"
+      android:paddingLeft="@dimen/first_keyline_half"
+      android:text="Type"
+      android:textColor="@color/body_text"
+      android:textSize="@dimen/caption"/>
 
-</LinearLayout>
+    <TextView
+      android:id="@+id/tv_height"
+      android:layout_width="@dimen/description_short"
+      android:layout_height="@dimen/first_keyline"
+      android:layout_below="@id/tv_number"
+      android:layout_marginLeft="@dimen/image_margin"
+      android:layout_marginTop="@dimen/first_keyline_half"
+      android:layout_toRightOf="@id/iv_main"
+      android:background="@color/text_background"
+      android:paddingLeft="@dimen/first_keyline_half"
+      android:text="Height"
+      android:textColor="@color/body_text"
+      android:textSize="@dimen/caption"/>
+
+    <TextView
+      android:id="@+id/tv_weight"
+      android:layout_width="@dimen/description_short"
+      android:layout_height="@dimen/first_keyline"
+      android:layout_below="@id/tv_height"
+      android:layout_marginLeft="@dimen/image_margin"
+      android:layout_marginTop="@dimen/first_keyline_half"
+      android:layout_toRightOf="@id/iv_main"
+      android:background="@color/text_background"
+      android:paddingLeft="@dimen/first_keyline_half"
+      android:text="Weight"
+      android:textColor="@color/body_text"
+      android:textSize="@dimen/caption"/>
+
+    <!-- Long TextViews -->
+
+    <TextView
+      android:id="@+id/tv_l1"
+      android:layout_width="@dimen/description_long"
+      android:layout_height="@dimen/first_keyline"
+      android:layout_below="@id/iv_main"
+      android:layout_marginLeft="@dimen/image_margin"
+      android:layout_marginTop="@dimen/second_keyline"
+      android:background="@color/text_background"/>
+
+    <TextView
+      android:id="@+id/tv_l2"
+      android:layout_width="@dimen/description_long"
+      android:layout_height="@dimen/first_keyline"
+      android:layout_below="@id/tv_l1"
+      android:layout_marginLeft="@dimen/image_margin"
+      android:layout_marginTop="@dimen/first_keyline_half"
+      android:background="@color/text_background"/>
+
+    <TextView
+      android:id="@+id/tv_l3"
+      android:layout_width="@dimen/description_long"
+      android:layout_height="@dimen/first_keyline"
+      android:layout_below="@id/tv_l2"
+      android:layout_marginLeft="@dimen/image_margin"
+      android:layout_marginTop="@dimen/first_keyline_half"
+      android:background="@color/text_background"/>
+
+    <TextView
+      android:id="@+id/tv_l4"
+      android:layout_width="@dimen/description_long"
+      android:layout_height="@dimen/first_keyline"
+      android:layout_below="@id/tv_l3"
+      android:layout_marginLeft="@dimen/image_margin"
+      android:layout_marginTop="@dimen/first_keyline_half"
+      android:background="@color/text_background"/>
+
+  </RelativeLayout>
+
+
+  <View
+    android:id="@+id/shadow_top"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/shadow_height_toolbar"
+    android:layout_below="@id/toolbar_main"
+    android:background="@drawable/shadow_toolbar"/>
+
+  <View
+    android:id="@+id/shadow_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/shadow_height_toolbar"
+    android:layout_below="@id/ll_window"
+    android:background="@drawable/shadow_section_top"/>
+
+
+  <EditText
+    android:id="@+id/et_poke_search"
+    android:layout_width="@dimen/description_long"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/shadow_bottom"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="@dimen/first_keyline_half"
+    android:hint="@string/pokemon_search_hint"
+    android:maxLines="1"
+    android:textAlignment="center"
+    android:textColor="@color/display_text"
+    android:textColorHint="@color/display_text"
+    android:textSize="@dimen/title"/>
+
+
+  <TextView
+    android:id="@+id/tv_submit"
+    android:layout_width="@dimen/description_short"
+    android:layout_height="36dp"
+    android:layout_below="@id/et_poke_search"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="@dimen/first_keyline_half"
+    android:background="@color/charmander_red"
+    android:gravity="center"
+    android:text="search"
+    android:textAllCaps="true"
+    android:textColor="@color/title_text"/>
+
+
+</RelativeLayout>

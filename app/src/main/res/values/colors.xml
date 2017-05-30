@@ -12,16 +12,21 @@
   <color name="green_dark">#2ba670</color>
   <color name="orange">#F09F6D</color>
   <color name="red_dark">#da401e</color>
+  <color name="charmander_red">#e63900</color>
+  <color name="ivysaur_green">#104a39</color>
+  <color name="charmeleon_red">#8b2900</color>
+  <color name="pikachu_yellow">#ffd508</color>
 
   <!-- UI -->
   <color name="bg_color_light">#fff</color>
-  <color name="bg_color_dark">#ff4e4e4e</color>
+  <color name="bg_color_dark">#4e4e4e</color>
   <color name="toolbar_image_viewer">#93000000</color>
   <color name="blue_button">#53B5FC</color>
   <color name="divider">#1f000000</color>
   <color name="section_divider">#e4e4e4</color>
   <color name="section_divider_dark">#383838</color>
   <color name="transparent_dark_bg_color">#E6000000</color>
+  <color name="circle_shadow_color">#292929</color>
 
   <!-- selector -->
   <color name="item_selected">#326a6a6a</color>
@@ -32,5 +37,6 @@
   <color name="title_text">#de000000</color>
   <color name="body_text">#de000000</color>
   <color name="caption_text">#89000000</color>
+  <color name="text_background">#949494</color>
 
 </resources>

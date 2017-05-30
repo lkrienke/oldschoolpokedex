@@ -1,3 +1,4 @@
 <resources>
   <string name="app_name">Oldschool Pokedex</string>
+  <string name="pokemon_search_hint">Pokemon name or #</string>
 </resources>

@@ -3,6 +3,13 @@ package com.jazzyapps.oldschoolpokedex.model.Pokemon;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
+import java.util.Dictionary;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
 public class Pokemon {
 
   @Expose
@@ -11,6 +18,10 @@ public class Pokemon {
   private String name;
   @Expose
   private int height;
+  @Expose
+  private int weight;
+  @Expose
+  private Map<String, String> sprites;
 
   public int getId() {
     return id;
@@ -35,4 +46,21 @@ public class Pokemon {
   public void setHeight(int height) {
     this.height = height;
   }
+
+  public int getWeight() {
+    return weight;
+  }
+
+  public void setWeight(int weight) {
+    this.weight = weight;
+  }
+
+  public Map<String, String> getSprites() {
+    return sprites;
+  }
+
+  public void setSprites(Map<String, String> sprites) {
+    this.sprites = sprites;
+  }
 }
+
